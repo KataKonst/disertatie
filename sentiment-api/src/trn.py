@@ -39,7 +39,7 @@ async def message(sid, data):
         vadeScore = vaderService.getScore(itm["text"])
         itm["vader"] = vadeScore
         tweetService.add(itm)
-        await sio.emit("tweet", {"text":itm["text"],"vader":vadeScore})
+        await sio.emit("tweet", {"text":itm["text"],"vader":vadeScore, "location":itm["place"]["full_name"]})
         q.task_done()
 
 
