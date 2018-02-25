@@ -1,30 +1,74 @@
 <template>
-  <div class="counter-wrapper">
+  <div>
+     <v-content>
+
+      <v-flex xs8>
+    <region-stat-list :page="page" :pageSize=5 v-if="statsList && statsList.length !== 0" :stats="statsList.results" :regionClick="setRegion">
+    </region-stat-list>
+    <div v-if="statsList && statsList.length !== 0" class="text-xs-center">
+      <v-pagination :length="statsLength" v-model="page"></v-pagination>
+    </div>
+    </v-flex>
+      <v-flex xs4>
+
+    <div v-if="name">
+      <region-tweets :placeName="name"></region-tweets>
+    </div>
+          </v-flex>
+     </v-content>
 
   </div>
 
 </template>
 
 <script>
-  export default {
+  import RegionStatList from "./RegionStatList";
+  import RegionTweets from "./RegionTweets";
+
+ export default {
+    components: {
+      RegionStatList,
+      RegionTweets
+    },
+    data() {
+      return {
+        page: null,
+        name: null
+      }
+    },
+      methods: {
+      setRegion(region) {
+       this.$data.name = region
+      }
+      },
+    beforeMount() {
+      this.$data.page = 1
+      this.$store.dispatch('getTwitterStats', {
+        page: 1, size: 5
+      })
+    },
     computed: {
-      count() {
-        return this.$store.state.count
+      statsList: {
+        get() {
+          return this.$store.state.twitter.statsList
+        }
+      },
+      statsLength: {
+        get() {
+          return Math.ceil(this.$store.state.twitter.statsList.length / 5)
+        }
+      },
+    },
+    watch: {
+      page: function (val) {
+        this.$store.dispatch('getTwitterStats', {
+          page: val, size: 5
+        })
       }
     }
   }
 </script>
 
-<style>
-  .counter {
-    margin: 100px auto;
-    border-radius: 3px;
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    line-height: 200px;
-    font-size: 5rem;
-    background-color: #f0f0f0;
-    user-select: none;
-  }
+<style scoped>
+
 </style>

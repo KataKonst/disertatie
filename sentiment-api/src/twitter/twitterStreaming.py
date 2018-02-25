@@ -29,4 +29,4 @@ class TwiteerStreaming:
      twitterStream = Stream(auth, listener(queue),async=True)
      lct=[location[0]["lng"],location[0]["lat"], location[1]["lng"],location[1]["lat"]]
      print(lct)
-     twitterStream.filter(locations=lct)
+     twitterStream.filter(locations=lct,tweet_mode="extended")

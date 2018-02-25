@@ -11,8 +11,16 @@ def searchByLocation(location, page, size):
                 'results': tweetService.findByLocation(location, int(page), int(size))})
     return dumps(res)
 
+@tweets.route('/location-full/<location>/page/<page>/size/<size>')
+def searchByLocationFullName(location, page, size):
+    res = dict({'length' :tweetService.countByLocationFullName(location),
+                'results': tweetService.findByLocationFullName(location, int(page), int(size))})
+    return dumps(res)
+
 @tweets.route('/average/page/<page>/size/<size>')
 def averrage(page, size):
-    res = dict({'length':tweetService.averrageByLocationCount(),
-                'results': tweetService.averrageByLocation(int(page), int(size))})
+    results = tweetService.averrageByLocation(int(page), int(size))
+    print(results[0])
+    res = dict({'length':results[0]['metadata'][0]['total'],
+                'results': results[0]['data']})
     return dumps(res)

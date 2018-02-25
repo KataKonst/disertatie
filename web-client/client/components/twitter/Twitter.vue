@@ -106,7 +106,6 @@
         })
       },
       updatePlace($event) {
-        console.log({lat: $event.geometry.location.lat(), lng: $event.geometry.location.lng()})
         this.markers[0].position = {lat: $event.geometry.location.lat(), lng: $event.geometry.location.lng()}
         this.markers[1].position = {lat: $event.geometry.location.lat(), lng: $event.geometry.location.lng()}
         this.center = this.markers[0].position

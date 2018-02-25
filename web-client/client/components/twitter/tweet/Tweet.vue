@@ -11,7 +11,6 @@
           </div>
         </v-card-title>
         <v-card-actions>
-          <router-link :to="{ path: 'game' }">Reviews</router-link>
           <v-spacer></v-spacer>
           <v-btn icon @click.native="show = !show">
             <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>

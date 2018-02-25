@@ -4,6 +4,7 @@ import Home from '../views/Home'
 import SentInput from '../components/sentiment/Sentinput'
 import GameDetail from '../components/game/GameDetail'
 import Twitter from '../components/twitter/Twitter'
+import TwitterStats from '../components/twitter/stats/TwitterStats'
 
 
 
@@ -19,6 +20,10 @@ export default new Router({
     {
       path: '/twitter',
       component: Twitter
+    },
+    {
+      path: '/twitter/stats',
+      component: TwitterStats
     },
     {
       path: '/sentiment',
