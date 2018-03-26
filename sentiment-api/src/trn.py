@@ -4,8 +4,8 @@ import socketio
 from queue import  Queue
 from twitter.twitterStreaming import TwiteerStreaming
 from analysis.services.vaderServiceEn import VaderServiceEn
+from analysis.services.stanfordService import StanfordService
 from mongo.tweetService import TweetService
-
 import json
 
 sio = socketio.AsyncServer()
@@ -14,9 +14,9 @@ sio.attach(app)
 tweetStream = TwiteerStreaming()
 vaderService = VaderServiceEn()
 tweetService = TweetService()
+stanfordService = StanfordService()
 
 async def index(request):
-    """Serve the client-side application."""
     with open('index.html') as f:
         return web.Response(text=f.read(), content_type='text/html')
 
@@ -27,9 +27,6 @@ def connect(sid, environ):
 @sio.on('get_tweets')
 async def message(sid, data):
     q = Queue()
-
-    print(data["location"])
-
     thread = Thread(target=tweetStream.filter, args=(q, data["location"],))
     thread.start()
 
@@ -38,10 +35,12 @@ async def message(sid, data):
         itm = json.loads(item)
         vadeScore = vaderService.getScore(itm["text"])
         itm["vader"] = vadeScore
+        itm["stanford"]["result"] = stanfordService.getScore(itm["text"])
         tweetService.add(itm)
-        await sio.emit("tweet", {"text":itm["text"],"vader":vadeScore, "location":itm["place"]["full_name"]})
+        await sio.emit("tweet", { "text":itm["text"],
+                                  "vader":vadeScore,
+                                  "location":itm["place"]["full_name"]})
         q.task_done()
-
 
 @sio.on('disconnect', namespace='/chat')
 def disconnect(sid):

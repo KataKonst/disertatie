@@ -17,10 +17,17 @@ def searchByLocationFullName(location, page, size):
                 'results': tweetService.findByLocationFullName(location, int(page), int(size))})
     return dumps(res)
 
-@tweets.route('/average/page/<page>/size/<size>')
-def averrage(page, size):
-    results = tweetService.averrageByLocation(int(page), int(size))
-    print(results[0])
-    res = dict({'length':results[0]['metadata'][0]['total'],
-                'results': results[0]['data']})
-    return dumps(res)
+@tweets.route('/average/page/<page>/size/<size>/alg/<algorithm>')
+def averrage(page, size, algorithm):
+
+    if algorithm == 'vader':
+        results = tweetService.averrageByLocation(int(page), int(size))
+        return dumps(dict({'length': results[0]['metadata'][0]['total'],
+                           'results': results[0]['data']}))
+
+    if algorithm == 'stanford':
+        results = tweetService.averrageByLocationStanford(int(page), int(size))
+        return dumps(dict({'length':results[0]['metadata'][0]['total'],
+                'results': results[0]['data']}))
+
+    return ""

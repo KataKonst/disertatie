@@ -41,7 +41,7 @@ const actions = {
     })
   },
   getTwitterStats({commit},data) {
-    twitterAPI.getStats(data.page, data.size).then(result => {
+    twitterAPI.getStats(data.page, data.size, data.algorithm).then(result => {
       commit("SetStatsTweets", result.data)
     }) 
    },

@@ -1,8 +1,7 @@
 <template>
-  <v-content>
     <v-card color="grey lighten-4" flat>
       <v-card-text>
-        <v-subheader>Light Theme</v-subheader>
+        <v-subheader>Analyze text</v-subheader>
         <v-container fluid>
           <v-layout row>
             <v-flex xs12>
@@ -19,20 +18,21 @@
       <v-flex xs2>
         <v-select class="ml-5" v-bind:items="algoritms" v-model="algoritm" label="Select" single-line
                   bottom></v-select>
-      </v-flex>
+     
       <v-card v-if="sentimentResult">
-        <v-card-text>
-          neu: {{sentimentResult.neu}}
-          neg: {{sentimentResult.neg}}
-          pos: {{sentimentResult.pos}}
-          compound: {{sentimentResult.compound}}
+        <v-card-text v-if="sentimentResult.method == 'vader'">
+          neu: {{sentimentResult.results.rneu}}
+          neg: {{sentimentResult.results.neg}}
+          pos: {{sentimentResult.results.pos}}
+          compound: {{sentimentResult.results.compound}}
+        </v-card-text>
+         <v-card-text v-if="sentimentResult.method == 'stanford'">
+          result: {{sentimentResult.results}}
         </v-card-text>
       </v-card>
       <v-btn @click="calculate">Calculate</v-btn>
-
-    </v-card>
-  </v-content>
-
+      </v-flex>
+      </v-card>
 </template>
 
 <script>
@@ -52,12 +52,16 @@
             language: "en",
             algorithm: "vader"
           },
+          {
+            text: 'Stanford EN',
+            language: "en",
+            algorithm: "stanford"
+          },
         ],
       }
     },
     methods: {
       calculate: function (event) {
-        console.log(this.$store.state)
         this.$store.dispatch("calculateSentiment",
           {input: this.$data.sentimentInput, alg: this.$data.algoritm})
       }

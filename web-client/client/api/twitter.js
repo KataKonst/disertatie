@@ -7,7 +7,7 @@ export default {
   searchByLocationFullName (location, page, size) {
     return axios.get("http://localhost:5000/twitter/location-full/"+location+"/page/"+page+"/size/"+size)
   },
-  getStats (page, size) {
-    return axios.get("http://localhost:5000/twitter/average/page/"+page+"/size/"+size)
+  getStats (page, size, alg) {
+    return axios.get("http://localhost:5000/twitter/average/page/"+page+"/size/"+size+"/alg/"+alg)
   }
 }

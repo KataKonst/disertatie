@@ -1,22 +1,23 @@
 <template>
   <div>
-     <v-content>
+      <v-flex xs3>
+    <v-select class="ml-5" 
+                v-on:change="onChange"
+               v-model="selectedAlgorithm" 
+               v-bind:items="algoritms" 
+               label="Select" single-line
+               bottom></v-select>
+       </v-flex>
 
-      <v-flex xs8>
+      <v-flex xs12>
     <region-stat-list :page="page" :pageSize=5 v-if="statsList && statsList.length !== 0" :stats="statsList.results" :regionClick="setRegion">
     </region-stat-list>
     <div v-if="statsList && statsList.length !== 0" class="text-xs-center">
       <v-pagination :length="statsLength" v-model="page"></v-pagination>
     </div>
     </v-flex>
-      <v-flex xs4>
-
-    <div v-if="name">
-      <region-tweets :placeName="name"></region-tweets>
-    </div>
-          </v-flex>
-     </v-content>
-
+      <v-flex>
+   </v-flex>
   </div>
 
 </template>
@@ -33,18 +34,40 @@
     data() {
       return {
         page: null,
-        name: null
+        name: null,
+        selectedAlgorithm: {
+            text: 'Vader EN',
+            language: "en",
+            algorithm: "vader"
+          },
+         algoritms: [
+          {
+            text: 'Vader EN',
+            language: "en",
+            algorithm: "vader"
+          },
+          {
+            text: 'Stanford EN',
+            language: "en",
+            algorithm: "stanford"
+          },
+        ],
       }
     },
       methods: {
       setRegion(region) {
-       this.$data.name = region
-      }
+        console.log(region)
+        this.$router.push({ path: '/twitter/region/'+region })
+      },
+      onChange(item) {
+           this.$store.dispatch('getTwitterStats', {
+        page: 1, size: 5, algorithm: item.algorithm
+      })      }
       },
     beforeMount() {
       this.$data.page = 1
       this.$store.dispatch('getTwitterStats', {
-        page: 1, size: 5
+        page: 1, size: 5, algorithm: this.$data.selectedAlgorithm.algorithm
       })
     },
     computed: {
@@ -62,7 +85,7 @@
     watch: {
       page: function (val) {
         this.$store.dispatch('getTwitterStats', {
-          page: val, size: 5
+          page: val, size: 5, algorithm: this.$data.selectedAlgorithm.algorithm
         })
       }
     }

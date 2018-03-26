@@ -8,8 +8,6 @@ import twitter from './twitter'
 import VueSocketio from 'vue-socket.io';
 import socketio from 'socket.io-client'
 
-
-
 Vue.use(Vuex)
 
 const state = {
@@ -46,6 +44,4 @@ const store = new Vuex.Store({
 })
 
 Vue.use(VueSocketio, socketio('http://localhost:8080'), store);
-
-
 export default store

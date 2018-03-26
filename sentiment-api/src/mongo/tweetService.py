@@ -49,4 +49,22 @@ class TweetService:
         }}
               ]))
 
+    def averrageByLocationStanford(self,page, size):
+        db = self.client['tweets']
+        collection = db['tweet']
+        skipSize = page * size -size
+        return list(collection.aggregate([{'$group':{
+                                                '_id': "$place.full_name",
+           'avg': { '$avg': "$stanford.result" },
+           'count': { '$sum': 1 }
+            }
+          },
+            {'$sort': { 'avg': -1}},
+            {'$facet': {
+                'metadata': [{ '$count': "total"}, { '$addFields': {'page': 'NumberInt(3)'}}],
+        'data': [{ '$skip': skipSize}, { '$limit': size}]
+        }}
+              ]))
+
+
 
