@@ -9,5 +9,11 @@ export default {
   },
   getStats (page, size, alg) {
     return axios.get("http://localhost:5000/twitter/average/page/"+page+"/size/"+size+"/alg/"+alg)
+  },
+  getAverageHashtags (page, size, alg) {
+    return axios.get("http://localhost:5000/hashtag/average/page/"+page+"/size/"+size+"/alg/"+alg)
+  },
+  searchByHashtag (hashtag, page, size) {
+    return axios.get("http://localhost:5000/hashtag/hashtag/"+hashtag+"/page/"+page+"/size/"+size)
   }
 }

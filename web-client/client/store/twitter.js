@@ -9,7 +9,9 @@ const state = {
   tweets: [],
   searchResult:[],
   statsList:[],
+  statsHashtagList:[],
   locationFullResults:[],
+  hashtagTweetsResult: [],
 }
 
 const mutations = {
@@ -25,9 +27,15 @@ const mutations = {
   SetStatsTweets(state, result) {
     state.statsList = result
   },
+  SetStatsHashtagTweets(state, result) {
+    state.statsHashtagList = result
+  },
   SetLocationFullNameTweets(state, result) {
     console.log(result)
     state.locationFullResults =  result
+  },
+  SetHashtagTweets(state, result) {
+    state.hashtagTweetsResult = result;
   }
 }
 
@@ -45,10 +53,20 @@ const actions = {
       commit("SetStatsTweets", result.data)
     }) 
    },
+   getTwitterHashtagStats({commit},data) {
+    twitterAPI.getAverageHashtags(data.page, data.size, data.algorithm).then(result => {
+      commit("SetStatsHashtagTweets", result.data)
+    }) 
+   },
    getLocationFullNameTweets({commit}, data){
     twitterAPI.searchByLocationFullName(data.region ,data.page, data.size).then(result => {
       commit("SetLocationFullNameTweets", result.data)
     })  
+   },
+   getHashtagTweets({commit}, data){
+    twitterAPI.searchByHashtag(data.hashtag ,data.page, data.size).then(result => {
+      commit("SetHashtagTweets", result.data)
+    })
    }
 }
 

@@ -66,5 +66,56 @@ class TweetService:
         }}
               ]))
 
+    def averrageByHashTagsVader(self,page, size):
+        db = self.client['tweets']
+        collection = db['tweet']
+        skipSize = page * size -size
+        return list(collection.aggregate([
+            { '$unwind': "$entities.hashtags"},
+            {'$group':{
+              '_id': "$entities.hashtags.text",
+           'avg': { '$avg': "$vader.compound" },
+           'count': { '$sum': 1 }
+            }
+          },
+            {'$sort': { 'avg': -1}},
+            {'$facet': {
+                'metadata': [{ '$count': "total"}, { '$addFields': {'page': 'NumberInt(3)'}}],
+        'data': [{ '$skip': skipSize}, { '$limit': size}]
+        }}
+              ]))
+
+    def averrageByHashTagsStanford(self, page, size):
+        db = self.client['tweets']
+        collection = db['tweet']
+        skipSize = page * size - size
+        return list(collection.aggregate([
+            { '$unwind': "$entities.hashtags"},
+        {'$group': {
+            '_id': "$entities.hashtags.text",
+            'avg': {'$avg': "$stanford.result"},
+            'count': {'$sum': 1}
+        }
+        },
+            {'$sort': {'avg': -1}},
+            {'$facet': {
+                'metadata': [{'$count': "total"}, {'$addFields': {'page': 'NumberInt(3)'}}],
+                'data': [{'$skip': skipSize}, {'$limit': size}]
+            }}
+        ]))
+
+    def findByHashtag(self, hashtag, page, size):
+        db = self.client['tweets']
+        collection = db['tweet']
+        return collection.find({
+       'entities.hashtags.text': { '$in': [ hashtag ] } } ).skip(page * size - size).limit(size)
+
+    def countByHashTag(self, hashtag):
+        db = self.client['tweets']
+        collection = db['tweet']
+        return  collection.find({
+       'entities.hashtags.text': { '$in': [ hashtag ] } }) .count()
+
+
 
 

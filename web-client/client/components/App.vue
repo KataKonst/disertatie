@@ -70,6 +70,12 @@
           router: true,
           title: 'Analyze Sentiment',
           icon: 'domain',
+        },
+         {
+          href: '/hashtag',
+          router: true,
+          title: 'Hashtag',
+          icon: 'domain',
         }],
       };
     },

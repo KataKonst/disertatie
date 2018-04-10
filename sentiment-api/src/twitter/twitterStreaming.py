@@ -26,7 +26,7 @@ class TwiteerStreaming:
   def filter(self, queue,location):
      auth = OAuthHandler(ckey, csecret)
      auth.set_access_token(atoken, asecret)
-     twitterStream = Stream(auth, listener(queue),async=True)
+     twitterStream = Stream(auth, listener(queue),async=True, tweet_mode="extended")
      lct=[location[0]["lng"],location[0]["lat"], location[1]["lng"],location[1]["lat"]]
      print(lct)
-     twitterStream.filter(locations=lct,tweet_mode="extended")
+     twitterStream.filter(locations=lct)

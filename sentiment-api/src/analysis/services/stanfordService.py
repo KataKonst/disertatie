@@ -12,9 +12,11 @@ class StanfordService:
                              'timeout': 1000,
                          })
 
-            sentiment = 0
+            if type(res) is str:
+                return 0
+
+            sentiment=0
             for sent in res["sentences"] :
-                  print(sent["sentimentValue"]+ " "+" ".join([t["word"] for t in sent["tokens"]]))
                   sentiment += int(sent["sentimentValue"])
 
             return sentiment/len(res["sentences"])

@@ -6,6 +6,8 @@ import GameDetail from '../components/game/GameDetail'
 import Twitter from '../components/twitter/Twitter'
 import TwitterStats from '../components/twitter/stats/TwitterStats'
 import RegionTweetsList from '../components/twitter/tweet/RegionTweetsList'
+import HashtagStats from '../components/twitter/hashtags/HashtagStats'
+import HashtagTweetsList from '../components/twitter/hashtags/HashtagTweetsList'
 
 
 Vue.use(Router)
@@ -30,12 +32,20 @@ export default new Router({
       component: RegionTweetsList
     },
     {
+      path: '/twitter/hashtag/:hashtag',
+      component: HashtagTweetsList
+    },
+    {
       path: '/sentiment',
       component: SentInput
     },
     { 
       path: '/game/:name', 
       component:GameDetail
+    },
+    { 
+      path: '/hashtag', 
+      component: HashtagStats
     }
   ]
 })

@@ -1,5 +1,7 @@
 from threading import Thread
 from aiohttp import web
+from sanic import Sanic
+import time
 import socketio
 from queue import  Queue
 from twitter.twitterStreaming import TwiteerStreaming
@@ -7,18 +9,29 @@ from analysis.services.vaderServiceEn import VaderServiceEn
 from analysis.services.stanfordService import StanfordService
 from mongo.tweetService import TweetService
 import json
+from sanic import Sanic
+from sanic.response import html
 
-sio = socketio.AsyncServer()
-app = web.Application()
+
+sio = socketio.AsyncServer(async_mode="sanic")
+app = Sanic()
+app.config.KEEP_ALIVE =10000
+app.config.REQUEST_TIMEOUT= 10000
+app.config.RESPONSE_TIMEOUT= 10000
+app.config.DB_NAME = 'appdb'
+app.config.DB_NAME = 'appdb'
+
 sio.attach(app)
 tweetStream = TwiteerStreaming()
 vaderService = VaderServiceEn()
 tweetService = TweetService()
 stanfordService = StanfordService()
 
+@app.route('/')
 async def index(request):
     with open('index.html') as f:
-        return web.Response(text=f.read(), content_type='text/html')
+        return html(f.read())
+
 
 @sio.on('connect')
 def connect(sid, environ):
@@ -29,24 +42,37 @@ async def message(sid, data):
     q = Queue()
     thread = Thread(target=tweetStream.filter, args=(q, data["location"],))
     thread.start()
+    import sys
 
-    while True:
+    try:
+       while True:
+        time.sleep(1)
         item = q.get()
         itm = json.loads(item)
-        vadeScore = vaderService.getScore(itm["text"])
+        text = itm.get("text", "empty")
+        if "extended_tweet" in itm:
+            text = itm["extended_tweet"]["full_text"]
+
+        vadeScore = vaderService.getScore(text)
         itm["vader"] = vadeScore
-        itm["stanford"]["result"] = stanfordService.getScore(itm["text"])
+        itm["stanford"] = {"result": stanfordService.getScore(text)}
         tweetService.add(itm)
-        await sio.emit("tweet", { "text":itm["text"],
+        location =itm.get("place")
+        location_name = location.get("full_name")
+        await sio.emit("tweet", { "text":text,
                                   "vader":vadeScore,
-                                  "location":itm["place"]["full_name"]})
+                                  "location":location_name})
         q.task_done()
+
+    except Exception as e:
+        print(e)
+        sys.exit(1)
 
 @sio.on('disconnect', namespace='/chat')
 def disconnect(sid):
     print('disconnect ', sid)
 
-app.router.add_get('/', index)
+#app.router.add_get('/', index)
 
 if __name__ == '__main__':
-    web.run_app(app)
+    app.run(host="0.0.0.0", port=8080)

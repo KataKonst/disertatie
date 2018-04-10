@@ -4,6 +4,7 @@ from flask_cors import CORS
 from web.reviewApi import reviews
 from web.gamesApi import games
 from web.twitterAPI import tweets
+from web.hashtagsAPI import hashtags
 from flask_socketio import SocketIO,emit
 
 app = Flask(__name__)
@@ -22,5 +23,7 @@ def getCategories():
 app.register_blueprint(reviews, url_prefix='/review')
 app.register_blueprint(games, url_prefix='/game')
 app.register_blueprint(tweets, url_prefix='/twitter')
+app.register_blueprint(hashtags, url_prefix='/hashtag')
+
 
 
