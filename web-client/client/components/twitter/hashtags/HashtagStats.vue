@@ -49,6 +49,16 @@
             language: "en",
             algorithm: "stanford"
           },
+          {
+            text: 'SVM en',
+            language: "en",
+            algorithm: "svm"
+           },
+           {
+            text: 'Bayes en',
+            language: "en",
+            algorithm: "bayes"
+          },
         ],
       }
     },

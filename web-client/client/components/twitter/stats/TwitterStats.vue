@@ -51,12 +51,21 @@
             language: "en",
             algorithm: "stanford"
           },
+           {
+            text: 'SVM en',
+            language: "en",
+            algorithm: "svm"
+           },
+           {
+            text: 'Bayes en',
+            language: "en",
+            algorithm: "bayes"
+          },
         ],
       }
     },
       methods: {
       setRegion(region) {
-        console.log(region)
         this.$router.push({ path: '/twitter/region/'+region })
       },
       onChange(item) {

@@ -21,12 +21,18 @@
      
       <v-card v-if="sentimentResult">
         <v-card-text v-if="sentimentResult.method == 'vader'">
-          neu: {{sentimentResult.results.rneu}}
+          neu: {{sentimentResult.results.neu}}
           neg: {{sentimentResult.results.neg}}
           pos: {{sentimentResult.results.pos}}
           compound: {{sentimentResult.results.compound}}
         </v-card-text>
          <v-card-text v-if="sentimentResult.method == 'stanford'">
+          result: {{sentimentResult.results}}
+        </v-card-text>
+         <v-card-text v-if="sentimentResult.method == 'bayes'">
+          result: {{sentimentResult.results}}
+        </v-card-text>
+        <v-card-text v-if="sentimentResult.method == 'svm'">
           result: {{sentimentResult.results}}
         </v-card-text>
       </v-card>
@@ -57,6 +63,16 @@
             language: "en",
             algorithm: "stanford"
           },
+           {
+            text: 'Naive Bayes EN',
+            language: "en",
+            algorithm: "bayes"
+          },
+          {
+            text: 'SVM EN',
+            language: "en",
+            algorithm: "svm"
+          }
         ],
       }
     },

@@ -7,6 +7,8 @@ from queue import  Queue
 from twitter.twitterStreaming import TwiteerStreaming
 from analysis.services.vaderServiceEn import VaderServiceEn
 from analysis.services.stanfordService import StanfordService
+from analysis.services.naiveBayesService import NaiveBayesService
+from analysis.services.svmService import SVMService
 from mongo.tweetService import TweetService
 import json
 from sanic import Sanic
@@ -26,6 +28,8 @@ tweetStream = TwiteerStreaming()
 vaderService = VaderServiceEn()
 tweetService = TweetService()
 stanfordService = StanfordService()
+bayesService = NaiveBayesService()
+svmService = SVMService()
 
 @app.route('/')
 async def index(request):
@@ -55,6 +59,8 @@ async def message(sid, data):
 
         vadeScore = vaderService.getScore(text)
         itm["vader"] = vadeScore
+        itm["svm"] = 1 if svmService.getScore(text) == "positive" else 0
+        itm["bayes"] = 1 if bayesService.getScore(text) == "positive" else 0
         itm["stanford"] = {"result": stanfordService.getScore(text)}
         tweetService.add(itm)
         location =itm.get("place")

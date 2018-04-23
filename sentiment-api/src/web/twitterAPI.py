@@ -30,4 +30,14 @@ def averrage(page, size, algorithm):
         return dumps(dict({'length':results[0]['metadata'][0]['total'],
                 'results': results[0]['data']}))
 
+    if algorithm == 'svm':
+        results = tweetService.averrageByLocationSvm(int(page), int(size))
+        return dumps(dict({'length':results[0]['metadata'][0]['total'],
+                'results': results[0]['data']}))
+
+    if algorithm == 'bayes':
+        results = tweetService.averrageByLocationBayes(int(page), int(size))
+        return dumps(dict({'length':results[0]['metadata'][0]['total'],
+                'results': results[0]['data']}))
+
     return ""
