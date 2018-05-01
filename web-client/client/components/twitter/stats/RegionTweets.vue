@@ -2,8 +2,8 @@
   <div>
     <tweet-list v-if="locationFullResults && locationFullResults.length !== 0" :tweets="locationFullResults.results">
     </tweet-list>
-    <div v-if="locationFullResults && locationFullResults.length !== 0" class="text-xs-center">
-      <v-pagination :length="locationFullResultsLength" v-model="page"></v-pagination>
+    <div v-if="locationFullResults && locationFullResults.length !== 0" class="text-xs-center mb-5">
+      <v-pagination  total-visible=7 :length="locationFullResultsLength" v-model="page"></v-pagination>
     </div>
   </div>
 </template>

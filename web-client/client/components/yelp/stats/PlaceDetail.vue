@@ -2,11 +2,10 @@
   <div>
     <review-list v-if="reviewList && reviewList.length !== 0" :reviews="reviewList.results">
     </review-list>
-    <div v-if="reviewList && reviewList.length !== 0" class="text-xs-center">
-      <v-pagination :length="reviewsLength" v-model="page"></v-pagination>
+    <div v-if="reviewList && reviewList.length !== 0" class="text-xs-center mb-5">
+      <v-pagination  total-visible=7 :length="reviewsLength" v-model="page"></v-pagination>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -16,7 +15,6 @@
     components: {
       ReviewList,
     },
-    name: "game-detail",
     data() {
       return {
         page: null,
@@ -24,7 +22,7 @@
     },
     beforeMount() {
       this.$data.page = 1
-      this.$store.dispatch('searchGameReviews', {
+      this.$store.dispatch('searchYelpReviews', {
         query: this.$route.params.name,
         page: 1, size: 16
       })
@@ -32,27 +30,25 @@
     computed: {
       reviewList: {
         get() {
-          return this.$store.state.reviews.searchResult
+          return this.$store.state.yelp.searchResult
         }
       },
       reviewsLength: {
         get() {
-          return Math.ceil(this.$store.state.reviews.searchResult.length / 16)
+          return Math.ceil(this.$store.state.yelp.searchResult.length / 16)
         }
       },
     },
     watch: {
       page: function (val) {
-        this.$store.dispatch('searchGameReviews', {
+        this.$store.dispatch('searchYelpReviews', {
           query: this.$route.params.name,
           page: val, size: 16
         })
-
       }
     }
   }
 </script>
 
 <style scoped>
-
 </style>

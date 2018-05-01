@@ -7,13 +7,13 @@
                v-bind:items="algoritms" 
                label="Select" single-line
                bottom></v-select>
-       </v-flex>
+    </v-flex>
 
       <v-flex xs12>
     <hashtag-list :page="page" :pageSize=5 v-if="statsList && statsList.length !== 0" :stats="statsList.results" :hashtagClick="setHashtag">
     </hashtag-list>
-    <div v-if="statsList && statsList.length !== 0" class="text-xs-center">
-      <v-pagination :length="statsLength" v-model="page"></v-pagination>
+    <div v-if="statsList && statsList.length !== 0" class="text-xs-center mb-5">
+      <v-pagination  total-visible=7 :length="statsLength" v-model="page"></v-pagination>
     </div>
     </v-flex>
       <v-flex>

@@ -48,8 +48,8 @@
 
     <tweet-list v-if="foundTweets && foundTweets.length !== 0" :tweets="foundTweets.results">
     </tweet-list>
-    <div v-if="foundTweets && foundTweets.length !== 0" class="text-xs-center">
-      <v-pagination :length="fndTweetsLength" v-model="page"></v-pagination>
+    <div v-if="foundTweets && foundTweets.length !== 0" class="text-xs-center mb-5">
+      <v-pagination  total-visible=7 :length="fndTweetsLength" v-model="page"></v-pagination>
     </div>
   </div>
 </template>

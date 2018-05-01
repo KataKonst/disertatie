@@ -10,17 +10,18 @@
             <span class="grey--text">{{review.sentiment}}</span>
           </div>
         </v-card-title>
-        <v-card-actions>
-          <v-btn flat>{{sentiment}}</v-btn>
-          <a :href=reviewUrl>Review Link</a>
+           <vader :sentiment=review.vader> </vader>
+           <svm :sentiment=review.svm></svm>
+           <bayes :sentimen=review.bayes></bayes>
+           <stars :stars=review.stars></stars>
+
           <v-spacer></v-spacer>
           <v-btn icon @click.native="show = !show">
             <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
           </v-btn>
-        </v-card-actions>
         <v-slide-y-transition>
           <v-card-text v-show="show">
-            {{review.review}}
+            {{review.text}}
           </v-card-text>
         </v-slide-y-transition>
       </v-card>
@@ -29,26 +30,33 @@
 </template>
 
 <script>
-  export default {
+import StarRating from 'vue-star-rating'
+import Svm from '../../sentiment/display/Svm'
+import Stars from '../../sentiment/display/Stars'
+import Bayes from '../../sentiment/display/Bayes'
+import Vader from '../../sentiment/display/Vader'
+
+ export default {
     props: ['review'],
     data: () => ({
       show: false
     }),
+     components: {
+      StarRating,
+      Vader,
+      Stars,
+      Svm,
+      Bayes
+    },
     computed: {
       preview: {
         get() {
-          return this.$props.review.review.substring(0, 30) + '...'
-        }
-      },
-      reviewUrl : {
-        get(){
-          return this.$props.review.review_url;
+          return this.$props.review.text.substring(0, 30) + '...'
         }
       },
       sentiment: {
         get() {
           let review = this.$props.review;
-          console.log(review)
           if (review.vader && review.vader.compound >= 0.5) {
             return "positive";
           } else if (review.vader.compound > -0.5 && review.vader.compound < 0.5) {
@@ -60,8 +68,9 @@
       }
     }
   }
+  
 </script>
 
 <style lang="scss">
-  @import "../../styleshets/main";
+  @import "../../../styleshets/main";
 </style>

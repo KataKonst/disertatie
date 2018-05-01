@@ -2,7 +2,7 @@
   <div>
       <v-flex xs3>
     <v-select class="ml-5" 
-                v-on:change="onChange"
+               v-on:change="onChange"
                v-model="selectedAlgorithm" 
                v-bind:items="algoritms" 
                label="Select" single-line
@@ -10,10 +10,10 @@
        </v-flex>
 
       <v-flex xs12>
-    <region-stat-list :page="page" :pageSize=5 v-if="statsList && statsList.length !== 0" :stats="statsList.results" :regionClick="setRegion">
-    </region-stat-list>
+    <place-list :page="page" :pagesize=5 v-if="statsList && statsList.length !== 0" :places="statsList.results">
+    </place-list>
     <div v-if="statsList && statsList.length !== 0" class="text-xs-center mb-5">
-      <v-pagination  total-visible=7 :length="statsLength" v-model="page"></v-pagination>
+      <v-pagination total-visible=7 :length="statsLength" v-model="page"></v-pagination>
     </div>
     </v-flex>
       <v-flex>
@@ -23,13 +23,11 @@
 </template>
 
 <script>
-  import RegionStatList from "./RegionStatList";
-  import RegionTweets from "./RegionTweets";
+  import PlaceList from "./PlaceList";
 
  export default {
     components: {
-      RegionStatList,
-      RegionTweets
+      PlaceList,
     },
     data() {
       return {
@@ -65,35 +63,36 @@
       }
     },
       methods: {
-      setRegion(region) {
-        this.$router.push({ path: '/twitter/region/'+region })
+      setPlace(place) {
+        this.$router.push({ path: '/place/name/'+game })
       },
       onChange(item) {
-           this.$store.dispatch('getTwitterStats', {
-        page: 1, size: 5, algorithm: item.algorithm
-      })      }
-      },
+           this.$store.dispatch('getPlaceStats', {
+           page: 1, size: 5, algorithm: item.algorithm
+       })      
+      }
+    },
     beforeMount() {
       this.$data.page = 1
-      this.$store.dispatch('getTwitterStats', {
+      this.$store.dispatch('getPlaceStats', {
         page: 1, size: 5, algorithm: this.$data.selectedAlgorithm.algorithm
       })
     },
     computed: {
       statsList: {
         get() {
-          return this.$store.state.twitter.statsList
+          return this.$store.state.yelp.statsList
         }
       },
       statsLength: {
         get() {
-          return Math.ceil(this.$store.state.twitter.statsList.length / 5)
+          return Math.ceil(this.$store.state.yelp.statsList.length / 5)
         }
       },
     },
     watch: {
       page: function (val) {
-        this.$store.dispatch('getTwitterStats', {
+        this.$store.dispatch('getPlaceStats', {
           page: val, size: 5, algorithm: this.$data.selectedAlgorithm.algorithm
         })
       }

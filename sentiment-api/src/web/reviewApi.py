@@ -43,9 +43,9 @@ def analizeReview(language, method):
 
     return "not implemented"
 
-
 @reviews.route('/col/<name>/page/<page>/size/<size>')
 def searchByCollection(name, page, size):
       res = dict({'length': reviewService.countByGame(name),
                     'results': reviewService.findByGame(name, int(page), int(size))})
       return dumps(res)
+

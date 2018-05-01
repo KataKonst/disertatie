@@ -30,7 +30,7 @@ def averrage(page, size, algorithm):
                            'results': results[0]['data']}))
 
 
-    return ""
+    return "not implemented"
 
 @hashtags.route('/hashtag/<hashtag>/page/<page>/size/<size>')
 def searchByHashtag(hashtag, page, size):

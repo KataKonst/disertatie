@@ -2,9 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home'
 import SentInput from '../components/sentiment/Sentinput'
-import GameDetail from '../components/game/GameDetail'
+import PlaceDetail from '../components/yelp/stats/PlaceDetail'
 import Twitter from '../components/twitter/Twitter'
 import TwitterStats from '../components/twitter/stats/TwitterStats'
+import YelpStats from '../components/yelp/stats/YelpStats'
 import RegionTweetsList from '../components/twitter/tweet/RegionTweetsList'
 import HashtagStats from '../components/twitter/hashtags/HashtagStats'
 import HashtagTweetsList from '../components/twitter/hashtags/HashtagTweetsList'
@@ -36,12 +37,16 @@ export default new Router({
       component: HashtagTweetsList
     },
     {
+      path: '/yelp/stats',
+      component: YelpStats
+    },
+    {
       path: '/sentiment',
       component: SentInput
     },
     { 
-      path: '/game/:name', 
-      component:GameDetail
+      path: '/yelp/:name', 
+      component:PlaceDetail
     },
     { 
       path: '/hashtag', 

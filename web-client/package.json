@@ -47,7 +47,8 @@
     "vuetify": "1.0.10",
     "axios": "^0.17.1",
     "vue2-google-maps": "^0.8.4",
-    "vue-socket.io": "^2.1.1-b"
+    "vue-socket.io": "^2.1.1-b",
+    "vue-star-rating": "1.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",

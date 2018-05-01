@@ -40,4 +40,4 @@ def averrage(page, size, algorithm):
         return dumps(dict({'length':results[0]['metadata'][0]['total'],
                 'results': results[0]['data']}))
 
-    return ""
+    return "not implemented"

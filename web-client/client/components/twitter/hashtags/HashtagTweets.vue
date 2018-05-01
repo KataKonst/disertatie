@@ -2,8 +2,8 @@
   <div>
     <tweet-list v-if="hashtagTweetsResults &&hashtagTweetsResults.length !== 0" :tweets="hashtagTweetsResults.results">
     </tweet-list>
-    <div v-if="hashtagTweetsResults &&hashtagTweetsResults.length !== 0" class="text-xs-center">
-      <v-pagination :length="hashtagTweetsResultsLength" v-model="page"></v-pagination>
+    <div v-if="hashtagTweetsResults &&hashtagTweetsResults.length !== 0" class="text-xs-center mb-5">
+      <v-pagination  total-visible=7 :length="hashtagTweetsResultsLength" v-model="page"></v-pagination>
     </div>
   </div>
 </template>

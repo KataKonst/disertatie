@@ -76,12 +76,18 @@
           router: true,
           title: 'Hashtag',
           icon: 'domain',
+        },
+        {
+          href: '/yelp/stats',
+          router: true,
+          title: 'Yelp',
+          icon: 'domain',
         }],
       };
     },
     methods: {
       openGithub() {
-        window.open('https://github.com/katakonst/sent-api');
+        window.open('https://github.com/katakonst/sent-proj');
       },
     },
   }

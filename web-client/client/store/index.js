@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import categoryStore from './category'
 import sentimentStore from './sentiment'
 import reviewStore from './review'
-import gameStore from './game'
+import yelpStore from './yelp'
 import twitter from './twitter'
 import VueSocketio from 'vue-socket.io';
 import socketio from 'socket.io-client'
@@ -38,7 +38,7 @@ const store = new Vuex.Store({
     category:categoryStore,
     sentiment: sentimentStore,
     reviews: reviewStore,
-    games: gameStore,
+    yelp: yelpStore,
     twitter: twitter
   }
 })

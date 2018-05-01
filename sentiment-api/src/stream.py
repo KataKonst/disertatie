@@ -78,7 +78,6 @@ async def message(sid, data):
 def disconnect(sid):
     print('disconnect ', sid)
 
-#app.router.add_get('/', index)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080)

@@ -19,7 +19,7 @@
         <v-select class="ml-5" v-bind:items="algoritms" v-model="algoritm" label="Select" single-line
                   bottom></v-select>
      
-      <v-card v-if="sentimentResult">
+      <v-card v-if="sentimentResult" class="ml-5 mb-3">
         <v-card-text v-if="sentimentResult.method == 'vader'">
           neu: {{sentimentResult.results.neu}}
           neg: {{sentimentResult.results.neg}}
@@ -36,7 +36,7 @@
           result: {{sentimentResult.results}}
         </v-card-text>
       </v-card>
-      <v-btn @click="calculate">Calculate</v-btn>
+      <v-btn @click="calculate" class="ml-5">Calculate</v-btn>
       </v-flex>
       </v-card>
 </template>
@@ -86,8 +86,6 @@
       sentimentResult: {
         get() {
           return this.$store.state.sentiment.sentimentResult
-        },
-        set(value) {
         }
       }
     }
