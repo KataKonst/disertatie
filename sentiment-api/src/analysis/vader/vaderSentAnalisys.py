@@ -43,7 +43,7 @@ BOOSTER_DICT = \
     {"absolut": B_INCR, "incredibil": B_INCR, "dureros": B_INCR, "complet": B_INCR, "considerabil": B_INCR,
      "prea": B_INCR, "profund": B_INCR, "effing": B_INCR, "enorm": B_INCR,
      "intrutotul": B_INCR, "special": B_INCR, "exceptional": B_INCR, "extrem": B_INCR,
-     "fabulos": B_INCR, "maret": B_INCR,
+     "fabulos": B_INCR, "maret": B_INCR,"mare": B_INCR,
      "intens": B_INCR, "major": B_INCR, "mai": B_INCR, "most": B_INCR, "particular": B_INCR,
      "pur": B_INCR, "quite": B_INCR, "really": B_INCR, "remarcabil": B_INCR,
      "deci": B_INCR, "substantial": B_INCR,
@@ -144,7 +144,6 @@ def scalar_inc_dec(word, first, valence, is_cap_diff):
                 else:
                     scalar -= C_INCR
 
-    print(word+" "+first+" "+ str(scalar))
     return scalar
 
 

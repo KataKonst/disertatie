@@ -1,6 +1,4 @@
 from threading import Thread
-from aiohttp import web
-from sanic import Sanic
 import time
 import socketio
 from queue import  Queue
@@ -9,11 +7,12 @@ from analysis.services.vaderServiceEn import VaderServiceEn
 from analysis.services.stanfordService import StanfordService
 from analysis.services.naiveBayesService import NaiveBayesService
 from analysis.services.svmService import SVMService
+from analysis.services.meService import MaximumEntropyService
+from analysis.services.tfService import TFService
 from mongo.tweetService import TweetService
 import json
 from sanic import Sanic
 from sanic.response import html
-
 
 sio = socketio.AsyncServer(async_mode="sanic")
 app = Sanic()
@@ -28,8 +27,10 @@ tweetStream = TwiteerStreaming()
 vaderService = VaderServiceEn()
 tweetService = TweetService()
 stanfordService = StanfordService()
-bayesService = NaiveBayesService()
-svmService = SVMService()
+bayesService = NaiveBayesService("en")
+svmService = SVMService("en")
+meService = MaximumEntropyService("en")
+tfService = TFService()
 
 @app.route('/')
 async def index(request):
@@ -61,7 +62,10 @@ async def message(sid, data):
         itm["vader"] = vadeScore
         itm["svm"] = 1 if svmService.getScore(text) == "positive" else 0
         itm["bayes"] = 1 if bayesService.getScore(text) == "positive" else 0
-        itm["stanford"] = {"result": stanfordService.getScore(text)}
+        #itm["stanford"] = {"result": stanfordService.getScore(text)}
+        itm["me"]=1 if meService.getScore(text) == "positive" else 0
+        itm["tf"]= {"result": tfService.getScore(text)}
+
         tweetService.add(itm)
         location =itm.get("place")
         location_name = location.get("full_name")

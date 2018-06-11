@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/katakonst/disertatie/sent-proj/sentiment-api/src/alg_stats/entf.tfl"
+all_model_checkpoint_paths: "/home/katakonst/disertatie/sent-proj/sentiment-api/src/alg_stats/entf.tfl"

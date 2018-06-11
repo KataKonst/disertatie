@@ -1,5 +1,4 @@
 from pycorenlp import StanfordCoreNLP
-from operator import attrgetter
 
 class StanfordService:
         nlp = StanfordCoreNLP('http://localhost:9000')

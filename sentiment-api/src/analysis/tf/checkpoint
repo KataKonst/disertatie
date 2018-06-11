@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/katakonst/disertatie/sent-proj/sentiment-api/src/analysis/tf/cjk2.tfl"
+all_model_checkpoint_paths: "/home/katakonst/disertatie/sent-proj/sentiment-api/src/analysis/tf/cjk2.tfl"

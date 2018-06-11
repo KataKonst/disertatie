@@ -1,0 +1,215 @@
+1528639354732	geckodriver	INFO	Listening on 127.0.0.1:44579
+1528639355738	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.Y7kuopJfFKBq
+1528639355739	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528639355740	geckodriver::marionette	INFO	Connecting to Marionette on localhost:43755
+1528639357141	Marionette	INFO	Listening on port 43755
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528639365896	geckodriver	INFO	Listening on 127.0.0.1:43111
+1528639366900	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.b30CaA9Fdh5d
+1528639366902	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528639366906	geckodriver::marionette	INFO	Connecting to Marionette on localhost:38757
+1528639368250	Marionette	INFO	Listening on port 38757
+1528639491447	geckodriver	INFO	Listening on 127.0.0.1:41585
+1528639492443	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.JX9hgXn29UKX
+1528639492445	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528639492447	geckodriver::marionette	INFO	Connecting to Marionette on localhost:34021
+1528639493801	Marionette	INFO	Listening on port 34021
+1528639694367	geckodriver	INFO	Listening on 127.0.0.1:58595
+1528639695364	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.qikq4WFhBBYB
+1528639695365	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528639695368	geckodriver::marionette	INFO	Connecting to Marionette on localhost:37753
+1528639696765	Marionette	INFO	Listening on port 37753
+1528639740715	geckodriver	INFO	Listening on 127.0.0.1:43443
+1528639741710	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.WRR5OhvkUNMe
+1528639741711	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528639741714	geckodriver::marionette	INFO	Connecting to Marionette on localhost:41009
+1528639743091	Marionette	INFO	Listening on port 41009
+1528639833276	geckodriver	INFO	Listening on 127.0.0.1:37893
+1528639834271	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.e1TIsmuUFlOG
+1528639834272	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528639834275	geckodriver::marionette	INFO	Connecting to Marionette on localhost:34805
+1528639835665	Marionette	INFO	Listening on port 34805
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528640106140	geckodriver	INFO	Listening on 127.0.0.1:49203
+1528640107137	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.ZNMuQ15Kgjpk
+1528640107138	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528640107141	geckodriver::marionette	INFO	Connecting to Marionette on localhost:40009
+1528640108479	Marionette	INFO	Listening on port 40009
+1528640208720	geckodriver	INFO	Listening on 127.0.0.1:58991
+1528640209723	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.oZ6Y1rd3Swde
+1528640209724	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528640209726	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35865
+1528640211080	Marionette	INFO	Listening on port 35865
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528640351824	geckodriver	INFO	Listening on 127.0.0.1:39499
+1528640352819	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.33FfbsOlIaB3
+1528640352820	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528640352822	geckodriver::marionette	INFO	Connecting to Marionette on localhost:34173
+1528640354207	Marionette	INFO	Listening on port 34173
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528640713033	geckodriver	INFO	Listening on 127.0.0.1:48205
+1528640714036	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.RspVezMHCYkw
+1528640714037	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528640714038	geckodriver::marionette	INFO	Connecting to Marionette on localhost:42005
+1528640715366	Marionette	INFO	Listening on port 42005
+1528640840867	geckodriver	INFO	Listening on 127.0.0.1:43169
+1528640841862	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.yOFb1GdyQQ20
+1528640841863	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528640841865	geckodriver::marionette	INFO	Connecting to Marionette on localhost:36093
+1528640843258	Marionette	INFO	Listening on port 36093
+1528641022495	geckodriver	INFO	Listening on 127.0.0.1:56039
+1528641023490	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.yYi3HJCurca8
+1528641023491	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528641023493	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32861
+1528641024870	Marionette	INFO	Listening on port 32861
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528641301381	geckodriver	INFO	Listening on 127.0.0.1:47137
+1528641302384	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.A8eaJFVX5Xft
+1528641302385	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528641302387	geckodriver::marionette	INFO	Connecting to Marionette on localhost:45233
+1528641303842	Marionette	INFO	Listening on port 45233
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528641508097	geckodriver	INFO	Listening on 127.0.0.1:39689
+1528641509101	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.isCr9Ou3ihUn
+1528641509102	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528641509104	geckodriver::marionette	INFO	Connecting to Marionette on localhost:42805
+1528641510566	Marionette	INFO	Listening on port 42805
+1528641510828	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
+onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:201
+_middleware/</<()@resource://activity-stream/lib/Store.jsm:49
+Store/this[method]()@resource://activity-stream/lib/Store.jsm:28
+uninit()@resource://activity-stream/lib/Store.jsm:151
+uninit()@resource://activity-stream/lib/ActivityStream.jsm:300
+uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:73
+shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:169
+callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4436
+observe()@resource://gre/modules/addons/XPIProvider.jsm:2287
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528641513140	geckodriver	INFO	Listening on 127.0.0.1:50653
+1528641514142	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.4eTPf5YLuzNd
+1528641514143	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528641514145	geckodriver::marionette	INFO	Connecting to Marionette on localhost:41889
+1528641515474	Marionette	INFO	Listening on port 41889
+1528641619298	geckodriver	INFO	Listening on 127.0.0.1:36785
+1528641620301	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.HHzmeHvNpMDN
+1528641620302	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528641620305	geckodriver::marionette	INFO	Connecting to Marionette on localhost:41701
+1528641621688	Marionette	INFO	Listening on port 41701
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528641678650	geckodriver	INFO	Listening on 127.0.0.1:40211
+1528641679653	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.DDnyusTMGP6n
+1528641679654	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528641679657	geckodriver::marionette	INFO	Connecting to Marionette on localhost:33583
+1528641681027	Marionette	INFO	Listening on port 33583
+1528641731110	geckodriver	INFO	Listening on 127.0.0.1:41177
+1528641732112	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.8oCYhPXHXbPV
+1528641732113	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528641732116	geckodriver::marionette	INFO	Connecting to Marionette on localhost:44459
+1528641733485	Marionette	INFO	Listening on port 44459
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528641843640	geckodriver	INFO	Listening on 127.0.0.1:57877
+1528641844644	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.i7ZFUQ2lwO2C
+1528641844646	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528641844649	geckodriver::marionette	INFO	Connecting to Marionette on localhost:38093
+1528641846032	Marionette	INFO	Listening on port 38093
+1528641882347	geckodriver	INFO	Listening on 127.0.0.1:35161
+1528641883350	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.u1f34Eu4lEz0
+1528641883350	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528641883352	geckodriver::marionette	INFO	Connecting to Marionette on localhost:43693
+1528641884739	Marionette	INFO	Listening on port 43693
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528642042993	geckodriver	INFO	Listening on 127.0.0.1:55919
+1528642043997	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.N15x9JoO4GLN
+1528642043998	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528642044001	geckodriver::marionette	INFO	Connecting to Marionette on localhost:42307
+1528642045342	Marionette	INFO	Listening on port 42307
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528642155400	geckodriver	INFO	Listening on 127.0.0.1:58467
+1528642156402	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.tyrixDmJ1lj2
+1528642156402	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528642156403	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35745
+1528642157784	Marionette	INFO	Listening on port 35745
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528642394827	geckodriver	INFO	Listening on 127.0.0.1:43959
+1528642395830	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.LRzQoeqz1W6m
+1528642395831	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528642395834	geckodriver::marionette	INFO	Connecting to Marionette on localhost:43163
+1528642397192	Marionette	INFO	Listening on port 43163
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528642513960	geckodriver	INFO	Listening on 127.0.0.1:52115
+1528642514962	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.v7KundTXaXU3
+1528642514963	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528642514965	geckodriver::marionette	INFO	Connecting to Marionette on localhost:39155
+1528642516322	Marionette	INFO	Listening on port 39155
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528642654426	geckodriver	INFO	Listening on 127.0.0.1:56229
+1528642655429	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.s6iKFRILHTUO
+1528642655430	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528642655432	geckodriver::marionette	INFO	Connecting to Marionette on localhost:42909
+1528642656756	Marionette	INFO	Listening on port 42909
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528642905497	geckodriver	INFO	Listening on 127.0.0.1:37391
+1528642906499	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.LTFxk2X7FGbC
+1528642906499	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528642906500	geckodriver::marionette	INFO	Connecting to Marionette on localhost:40095
+1528642907851	Marionette	INFO	Listening on port 40095
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528643155222	geckodriver	INFO	Listening on 127.0.0.1:47917
+1528643156225	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.Wjfnzxhc5vzk
+1528643156226	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528643156229	geckodriver::marionette	INFO	Connecting to Marionette on localhost:39181
+1528643157582	Marionette	INFO	Listening on port 39181
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528643179977	geckodriver	INFO	Listening on 127.0.0.1:33919
+1528643180982	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.YHPfdp8NTuRb
+1528643180983	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528643180985	geckodriver::marionette	INFO	Connecting to Marionette on localhost:40013
+1528643182314	Marionette	INFO	Listening on port 40013
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1528643317232	geckodriver	INFO	Listening on 127.0.0.1:35939
+1528643318237	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.mjZsAA3Ulr1F
+1528643318239	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1528643318242	geckodriver::marionette	INFO	Connecting to Marionette on localhost:45755
+1528643319576	Marionette	INFO	Listening on port 45755
+JavaScript warning: https://www.tutorialspoint.com/theme/js/script-min-v4.js?v=2, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead

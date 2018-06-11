@@ -3,11 +3,16 @@ from analysis.services.vaderServiceEn import VaderServiceEn
 from analysis.services.stanfordService import StanfordService
 from analysis.services.naiveBayesService import NaiveBayesService
 from analysis.services.svmService import SVMService
+from analysis.services.tfService import TFService
+from analysis.services.meService import MaximumEntropyService
+
 
 vaderService = VaderServiceEn()
-stanfordService = StanfordService()
-bayesService = NaiveBayesService()
-svmService = SVMService()
+stanfordService = None
+bayesService = NaiveBayesService("en")
+svmService =SVMService("en")
+tfService = TFService()
+meService =MaximumEntropyService("en")
 
 class YelpService:
     client = MongoClient('localhost', 27017)
@@ -41,6 +46,9 @@ class YelpService:
             review["business_name"]= business["name"]
             review["svm"] = 1 if svmService.getScore(review["text"]) == "positive" else 0
             review["bayes"] = 1 if bayesService.getScore(review["text"]) == "positive" else 0
+            review["me"] = 1 if meService.getScore(review["text"]) == "positive" else 0
+            review["tf"] = tfService.getScore(review["text"])
+
           ##  game["stanford"] = {"result": stanfordService.getScore(game["review"])}
             db = self.client['yelp']
             collection = db['reviews']

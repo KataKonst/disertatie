@@ -2,21 +2,27 @@ import os
 from googletrans import Translator
 import time
 from unidecode import unidecode
-import  json
-
+import json
+import glob
+import ntpath
 
 translator = Translator()
-
-for filename in os.listdir('/home/katakonst/Downloads/aclImdb/train/neg'):
+fileList = glob.glob("/home/katakonst/Downloads/aclImdb/test/neg/*.txt")
+os.makedirs("/home/katakonst/Downloads/ro/test/neg")
+for filename in fileList:
     try:
-        txt=""
-        time.sleep(1)
-        with open(os.path.join('/home/katakonst/Downloads/aclImdb/train/neg', filename)) as f:
-            content = f.read()
-            text=translator.translate(content, dest='ro', src="en")
-            txt=text.text;
-        with open(os.path.join('/home/katakonst/Downloads/aclImdb/train/neg', filename), "w") as f:
-            f.write(unidecode(txt.lower()))
-            print(unidecode(txt.lower()))
+        f = open(filename, 'r')
+        message = f.read()
+        words=message.split()
+        if len(words) < 150:
+            time.sleep(1)
+            print(filename)
+            text = translator.translate(message, dest='ro', src="en")
+            txt = text.text
+            file = open("/home/katakonst/Downloads/ro/test/neg/"+ntpath.basename(filename), "w")
+            file.write(unidecode(txt.lower()))
+            file.close()
+
+        f.close()
     except json.decoder.JSONDecodeError:
-        print("Asd")
+     print("error")
