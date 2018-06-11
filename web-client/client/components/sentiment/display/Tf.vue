@@ -1,10 +1,10 @@
 <template>
 <div>
-  <b>Bayes</b>
-  <p>value : {{sentiment}}</p>
+  <b>LSTM Tensorflow</b>
+  <p>positive: {{sentiment.positive}}</p>
+  <p>negative: {{sentiment.negative}}</p>
 </div>
 </template>
-
 
 <script>
 
@@ -13,7 +13,7 @@
      computed: {
       sentiment: {
         get() {
-         return this.$props.sentiment==1 ? "positive" : "negative"
+         return this.$props.sentiment
         }
       }
     }

@@ -34,9 +34,11 @@
         </v-toolbar>
         <v-content>
             <v-fade-transition mode="out-in">
+                  <v-container>
                     <v-flex xs12>
                 <router-view></router-view>
                     </v-flex>
+                  </v-container>
             </v-fade-transition>
         </v-content>
         <v-footer class="indigo pa-3" dark app>
@@ -54,7 +56,14 @@
           router: true,
           title: 'Home',
           icon: 'home',
-        }, {
+        }, 
+        {
+          href: '/imdb/stats',
+          router: true,
+          title: 'Imdb',
+          icon: 'home',
+        },
+        {
           href: '/twitter',
           router: true,
           title: 'Twitter',

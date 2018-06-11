@@ -6,6 +6,7 @@ import PlaceDetail from '../components/yelp/stats/PlaceDetail'
 import Twitter from '../components/twitter/Twitter'
 import TwitterStats from '../components/twitter/stats/TwitterStats'
 import YelpStats from '../components/yelp/stats/YelpStats'
+import IMDBStats from '../components/imdb/stats/IMDBStats'
 import RegionTweetsList from '../components/twitter/tweet/RegionTweetsList'
 import HashtagStats from '../components/twitter/hashtags/HashtagStats'
 import HashtagTweetsList from '../components/twitter/hashtags/HashtagTweetsList'
@@ -39,6 +40,10 @@ export default new Router({
     {
       path: '/yelp/stats',
       component: YelpStats
+    },
+    {
+      path: '/imdb/stats',
+      component: IMDBStats
     },
     {
       path: '/sentiment',

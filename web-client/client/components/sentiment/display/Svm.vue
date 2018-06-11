@@ -12,7 +12,7 @@
      computed: {
       sentiment: {
         get() {
-         return this.props==1 ? "positive" : "negative"
+         return this.$props.sentiment==1 ? "positive" : "negative"
         }
       }
     }

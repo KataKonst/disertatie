@@ -11,7 +11,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bayes.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bayes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/alg_stats/bayes.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -26,6 +26,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lstm.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/alg_stats/lstm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-36">
+              <caret line="51" column="29" lean-forward="false" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -61,7 +71,6 @@
       <find>bun</find>
       <find>224</find>
       <find>9076</find>
-      <find>convertWord</find>
       <find>build_dataset</find>
       <find>no</find>
       <find>very</find>
@@ -72,6 +81,8 @@
       <find>foarte</find>
       <find>mongo</find>
       <find>addBusiness</find>
+      <find>convertWord</find>
+      <find>reverse_dictionary</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/analysis/svm</dir>
@@ -119,7 +130,6 @@
         <option value="$PROJECT_DIR$/src/imdbInsertRo.py" />
         <option value="$PROJECT_DIR$/src/stream.py" />
         <option value="$PROJECT_DIR$/src/mongo/yelpService.py" />
-        <option value="$PROJECT_DIR$/src/alg_stats/emotional.py" />
         <option value="$PROJECT_DIR$/src/insertYelp.py" />
         <option value="$PROJECT_DIR$/src/alg_stats/pcl.py" />
         <option value="$PROJECT_DIR$/src/alg_stats/svm.py" />
@@ -132,6 +142,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/alg_stats/.gitignore" />
         <option value="$PROJECT_DIR$/src/analysis/bayes/.gitignore" />
+        <option value="$PROJECT_DIR$/src/alg_stats/emotional.py" />
       </list>
     </option>
   </component>
@@ -167,6 +178,12 @@
               <item name="sentiment-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="sentiment-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sentiment-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sentiment-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="alg_stats" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sentiment-api" type="b2602c69:ProjectViewProjectNode" />
@@ -474,13 +491,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/misc/neg/0bd29104-fc9c-403e-8a88-bc5e570b28d3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/analysis/tfro/tf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18">
@@ -685,20 +695,12 @@
         <state relative-caret-position="432">
           <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/misc/en/test/neg0a3cfe40-4183-4d23-82bf-9e28c0eeb5cc.txt" />
-    <entry file="file://$PROJECT_DIR$/src/alg_stats/emotional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2790">
-          <caret line="166" column="35" lean-forward="false" selection-start-line="166" selection-start-column="35" selection-end-line="166" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/untitled/lib/python3.6/site-packages/tflearn/models/dnn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
@@ -712,7 +714,7 @@
         <state relative-caret-position="108">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -746,7 +748,7 @@
         <state relative-caret-position="161">
           <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -851,6 +853,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-547134988/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="2317" column="8" lean-forward="false" selection-start-line="2317" selection-start-column="8" selection-end-line="2317" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alg_stats/lstm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="51" column="29" lean-forward="false" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
           <folding />
         </state>
       </provider>

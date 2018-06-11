@@ -1,10 +1,9 @@
 <template>
 <div>
-  <b>Bayes</b>
+  <b>Maximum Entropy</b>
   <p>value : {{sentiment}}</p>
 </div>
 </template>
-
 
 <script>
 
